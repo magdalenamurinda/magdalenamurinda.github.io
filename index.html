@@ -1,42 +1,110 @@
 <html>
 <head>
-	<title>LouderThanWords</title>
+	<title>MusicLessonsExpress</title>
 	<link rel="stylesheet" type="text/css" href="bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<link rel="stylesheet" type="text/css" href="MusicExpress.css">
+
 	<style type="text/css">
-
-
-
-	body, html{
-
-		background-color: grey;
-	}
-
-
-.h1 {
-	color: red;
-	font-size: 30px}
-
-	.container{
-		background-color: white;
-		margin:0 auto;
-		width:600px;
-	}
-
-		
-			 
-
-
 	</style>
 </head>
 <body>
-	<div class=" container">
-		<header class="row">
-			<img src="https://cdn.pixabay.com/photo/2016/03/12/08/29/handcuffed-1251664_960_720.jpg" width="200" height="200" class="img-responsive pull-left">
-			<h1 class= "h1">MusicLessonsExpress</h1>
-		</header> 
-		
-		<div img src="https://cdn.pixabay.com/photo/2016/03/12/08/29/handcuffed-1251664_960_720.jpg" width="200" height="200" class="img-responsive pull-left"></div>
-		<footer>2017 &copy; MusicLessonsExpress</footer>
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+			  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+			    <span class="sr-only">Toggle navigation</span>
+			    <span class="icon-bar"></span>
+			    <span class="icon-bar"></span>
+			    <span class="icon-bar"></span>
+			  </button>
+			  <a class="navbar-brand" href="#">Music Lessons Express</a>
+			</div>
+
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			  <ul class="nav navbar-nav">
+			    <!-- <li class="active"><a href="#"> About Music Lessons Express<span class="sr-only">(current)</span></a></li> -->
+			    <li><a href="aboutPage.html">About</a></li>
+			    <li><a href="InstrumentLocation.html">Lesson and Location</a></li>
+			    <li><a href="MusicReviewPage.html">Reviews</a></li>
+			  </ul>
+			</div>
+		</div>
+	</nav>
+
+	<br>
+	<br>
+
+	<div class="container">
+		<div class="row text-center">
+			<div class="col-md-12" style="background-color: red;">
+				<div id="pianoDropdown" class="dropdown-content">
+				    <div><iframe width="800" height="452" src="https://www.youtube.com/embed/R2SUUhnEIzg?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe></div>
+				  </div>
+				  
+				  <div id="ViolinDropdown" class="dropdown-content">
+				    <div><iframe width="800" height="452" src="https://www.youtube.com/embed/2h5puR8Z_5k?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe></div>
+				  </div>
+
+				  <div id="guitarDropdown" class="dropdown-content">
+				    <div><iframe width="800" height="452" src="https://www.youtube.com/embed/t3O6vA0UL3k?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe></div>
+				</div>
+
+				    <div id="FluteDropdown" class="dropdown-content">
+				    <div><iframe width="800" height="452" src="https://www.youtube.com/embed/ubks3AKfbpA?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe></div>
+				</div>					
+				<img src="http://dreamatico.com/data_images/music/music-7.jpg"  width="80%" height="80%"></img>
+				 <!-- <img width="20%" height="40%" src="http://static1.bigstockphoto.com/thumbs/0/5/1/large1500/150474620.jpg"> -->
+			</div>
+		</div>
+
+		<div class="row text-center" >
+			Welcome to Music Lessons Express 
+			<div id="buttons">
+				
+			    <div class="dropdown">
+				    <button onclick="myFunction('pianoDropdown')" class="dropbtn">Piano</button>
+				</div>
+				
+				<div class="dropdown">
+				  <button onclick="myFunction('guitarDropdown')" class="dropbtn">Guitar</button> 
+				</div>
+
+				<div class="dropdown">
+				  <button onclick="myFunction('FluteDropdown')" class="dropbtn">Flute</button>
+				</div>
+
+				<div class="dropdown">
+				    <button onclick="myFunction('ViolinDropdown')" class="dropbtn">Violin</button>
+				</div>
+			</div>
+		</div>
 	</div>
+	
+	<footer>2017 &copy; MusicLessonsExpress</footer>
+
+	<script type="text/javascript">
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction(n) {
+    document.getElementById(n).classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+	</script>
 </body>
 </html>
