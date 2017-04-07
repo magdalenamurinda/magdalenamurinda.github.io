@@ -1,0 +1,206 @@
+<html>
+<head>
+	<title>MusicLessonsExpress</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<link rel="stylesheet" type="text/css" href="MusicExpress.css">
+
+	<style type="text/css">
+	</style>
+</head>
+<body>
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+			  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+			    <span class="sr-only">Toggle navigation</span>
+			    <span class="icon-bar"></span>
+			    <span class="icon-bar"></span>
+			    <span class="icon-bar"></span>
+			  </button>
+			  <a class="navbar-brand" href="index.html">Music Lessons Express</a>
+			</div>
+
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			  <ul class="nav navbar-nav">
+			    <!-- <li class="active"><a href="#"> About Music Lessons Express<span class="sr-only">(current)</span></a></li> -->
+			    <li><a href="aboutPage.html">About</a></li>
+			    <li><a href="InstrumentLocation.html">Lesson  and Location </a></li>
+			    <li><a href="MusicReviewPage.html">Reviews</a></li>
+			  </ul>
+			</div>
+		</div>
+	</nav>
+
+	<br>
+	<br>
+
+	<div class=" container row">
+
+		<h2> Reviews of Music Teachers and Lessons.</h2>
+		<img src="https://img.clipartfest.com/32469c1b96ce5d0667d7ed008b7b8220_peer-review-clipart-peer-peer-review-clipart_510-368.jpeg" width = 20% height= 20%>
+
+
+		
+
+			<p class= "textwithborder"> Had been taking lessons here for a few years, mostly to learn music theory. By all means the teacher is a fine player and knows theory inside out. But it's one thing to improvise, quite another to teach the subject. I don't get the impression he has a prepared lesson plan when he does arrive~ Katy Khalid on Joplin's Irish Music Center.<br><br><br><br>
+s
+
+					I had a blast learning to play my favorite worship song. Presley even helped me record it so I could send it out to my family! You should take lessons here! ~ Sarah Syed on Praise and Worship Piano lessons and Recording studio.<br><br><br>
+
+
+				
+
+
+				Outstanding instructor, professionally gifted, most helpful and very personable.~ Belinda Rice <br><br>
+
+				If you also want to contribute your idea feel free to fill out the contact form down below.<br><br><br><br><br><br><br><br><br><br><br>
+
+
+				<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="well well-sm">
+                <form class="form-horizontal" method="post">
+                    <fieldset>
+                        <legend class="text-center header">Contact us</legend>
+                        <div class="form-group">
+                            <div class="col-md-10 col-md-offset-1">
+                                <input id="fname" name="name" type="text" placeholder="First Name" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-10 col-md-offset-1">
+                                <input id="lname" name="name" type="text" placeholder="Last Name" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-10 col-md-offset-1">
+                                <input id="email" name="email" type="text" placeholder="Email Address" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-10 col-md-offset-1">
+                                <input id="phone" name="phone" type="text" placeholder="Phone" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-10 col-md-offset-1">
+                                <textarea class="form-control" id="message" name="message" placeholder="If you want to summit your review feel free." rows="7"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-12 text-center">
+                                <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div>
+                <div class="panel panel-default">
+                    <div class="text-center header">Our Office</div>
+                    <div class="panel-body text-center">
+                        <h4>Address</h4>
+                        <div>
+                        Music Lessons Express<br />
+                        Dundrum Dublin<br />
+                        0877996239
+                        MusicLessonsExpress@gmail.com<br />
+                        <br>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9540.476619243094!2d-6.253589213180251!3d53.287400556941094!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48670967208312b5%3A0x2600c7a819b930d1!2sDundrum%2C+Dublin!5e0!3m2!1sen!2sie!4v1491485154628" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        </div>
+                        <hr />
+                        <div id="map1" class="map">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+
+<script type="text/javascript">
+    jQuery(function ($) {
+        function init_map1() {
+            var myLocation = new google.maps.LatLng(38.885516, -77.09327200000001);
+            var mapOptions = {
+                center: myLocation,
+                zoom: 16
+            };
+            var marker = new google.maps.Marker({
+                position: myLocation,
+                title: "Property Location"
+            });
+            var map = new google.maps.Map(document.getElementById("map1"),
+                mapOptions);
+            marker.setMap(map);
+        }
+        init_map1();
+    });
+</script>
+
+<style>
+    .map {
+        min-width: 300px;
+        min-height: 300px;
+        width: 100%;
+        height: 100%;
+    }
+
+    .header {
+        background-color: #F5F5F5;
+        color: #36A0FF;
+        height: 70px;
+        font-size: 50px;
+        padding: 10px;
+    }
+</style>
+
+
+				<div class="container">
+    
+</div>
+
+<style>
+    .header {
+        color: #36A0FF;
+        font-size: 50px;
+        padding: 10px;
+    }
+
+    .bigicon {
+        font-size: 50px;
+        background-color: white;
+    }
+</style>
+
+
+
+
+
+
+			</p>
+
+
+
+
+
+
+
+		
+	</div>
+
+	<footer>2017 &copy; MusicLessonsExpress</footer>
+</body>
+</html>
